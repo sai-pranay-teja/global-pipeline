@@ -1,3 +1,5 @@
+def p1() {
+
 pipeline {
     agent any
 
@@ -32,6 +34,8 @@ post {
     always {
         echo "stupid dumbfuck"
     }
+}
+
 }
 
 }
