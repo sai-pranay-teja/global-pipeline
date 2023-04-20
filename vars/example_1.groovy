@@ -14,16 +14,20 @@ string(name: "NAME", defaultValue: "Go", description: "Tf you gonna do?")
     }
 
 stages {
-    when {
-        expression { params.NAME == 'Go' }
-            }
+    
     stage("first") {
+        when {
+            expression { params.NAME == 'Go' }
+        }
         steps{
         echo "Name is ${NAME}"
 
         }
     }
     stage("second") {
+        when {
+            expression { params.NAME == 'Go' }
+        }
         steps{
         echo "course is ${course}"
         sh 'env'
