@@ -1,4 +1,4 @@
-def p1() {
+def call() {
 
 pipeline {
     agent any
