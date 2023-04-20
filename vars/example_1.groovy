@@ -14,6 +14,9 @@ string(name: "NAME", defaultValue: "Go", description: "Tf you gonna do?")
     }
 
 stages {
+    when {
+        expression { params.NAME == 'Go' }
+            }
     stage("first") {
         steps{
         echo "Name is ${NAME}"
