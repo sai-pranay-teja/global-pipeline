@@ -9,6 +9,9 @@ string(name: "NAME", defaultValue: "Go", description: "Tf you gonna do?")
 }
 
   environment {
+    when {
+            expression { params.NAME == 'Go' }
+        }
         NAME = input message: 'Please enter the Name',parameters: [string(defaultValue: '',description: '',name: 'NAME')]
         course    = input message: 'Please enter the Course Name',parameters: [string(defaultValue: '',description: '',name: 'CourseName')]
     }
