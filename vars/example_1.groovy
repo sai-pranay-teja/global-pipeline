@@ -18,7 +18,7 @@ stages {
             expression { params.NAME == 'Bro' }
         }
         steps{
-        echo "Name is ${NAME}"
+       
 
         }
     }
@@ -29,7 +29,7 @@ stages {
             expression { params.NAME == 'COOL' }
         }
         steps{
-        echo "course is ${course}"
+        
         sh 'env'
         }
         
