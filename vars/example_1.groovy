@@ -14,12 +14,15 @@ pipeline {
             }
         }
         stage('second') {
-            steps {
-                input {
+            input {
                 message "Proceed?"
                 ok "Yes, we should."
-                }
             }
+            steps{
+                echo "Good"
+            }
+                
+            
             }
         }
     }
