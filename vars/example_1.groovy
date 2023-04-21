@@ -7,7 +7,7 @@ pipeline {
             steps {
                 script {
                     if(software=="npm")
-                      sh 'mvn package'
+                      sh 'echo npm > npm.txt'
                     // code.case_1()
                 }
         }
