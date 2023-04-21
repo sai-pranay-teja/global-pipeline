@@ -26,7 +26,7 @@ node {
 
     } 
 
-    catch (e){
+
         stage("fuck you bro"){
             echo "lol looser"
         }
@@ -34,4 +34,3 @@ node {
 
 }
 
-}
