@@ -1,3 +1,5 @@
+def call() {
+
 node {
 
     try {
@@ -22,5 +24,7 @@ node {
             echo "lol looser"
         }
     }
+
+}
 
 }
