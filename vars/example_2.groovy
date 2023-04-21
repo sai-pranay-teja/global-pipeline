@@ -4,7 +4,7 @@ node {
 
     try {
         stage("first") {
-            input(id: 'user', message: 'What you chose?', yes:'go',no:'stop')
+            input(id: 'user', message: 'What you chose?', ok: 'go',reject: 'stop')
             
             echo "first"
     
