@@ -2,24 +2,20 @@ def call() {
 
 pipeline {
     agent any
-    parameters { string(name: 'NAME', defaultValue: 'GO', description: 'Enter the name') }
     stages {
         stage('first') {
             steps {
                 script {
-                    if (params.NAME== 'GO') {
-                        echo "proceed"
-                    }
-                    }
-            }
+                    code.case_1()
+                }
+        }
         }
         stage('second') {
-            input {
-                message "Proceed?"
-                ok "Yes, we should."
-            }
             steps{
-                echo "Good"
+                script{
+                    code.case_2()
+
+                }
             }
                 
             
@@ -29,12 +25,6 @@ pipeline {
 }
 
 
-
-post {
-    failure {
-        echo "stupid dumbfuck"
-    }
-}
 
 
 
