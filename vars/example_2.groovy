@@ -2,17 +2,24 @@ def call() {
 
 node {
 
-    try {
+    parameters { string(name: 'VALUE', defaultValue: 'Pranay', description: 'Enter a value') }
+    stages{
         stage("first") {
             input(id: 'user', message: 'What you chose?', ok: 'go',reject: 'stop')
             
             echo "first"
     
     }
+        stage("Test") {
+            //   when {
+            //     expression {
+            //         if 
+            //     }
+            // }
+        }
         stage("second") {
         
-                echo "second"
-                sh 'exit 1'
+                echo "${params.VALUE}"
         
         
     }
