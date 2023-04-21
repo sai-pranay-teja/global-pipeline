@@ -11,17 +11,14 @@ string(name: "NAME", defaultValue: "Go", description: "Tf you gonna do?")
 
 stages {
 
-    stage("if-block")
-    {
-        script{
-            if (params.NAME == 'GO') {
-                echo 'Go further'
-        }
-        }
-    }
+    
     
     stage("first") {
-        // input(id: 'input', message: 'Please enter the Name',parameters: [string(defaultValue: '',description: '',name: 'NAME')])
+
+        script{
+            if (params.NAME == 'GO') {
+                echo "alright go"
+        }
 
 
         steps {
@@ -31,7 +28,7 @@ stages {
                 )
         }
 
-        
+        }
     
     stage("second") {
         // input(id: 'input-1', message: 'Please enter the Course Name',parameters: [string(defaultValue: '',description: '',name: 'CourseName')])
