@@ -7,7 +7,7 @@ pipeline {
             steps {
                 script {
                     if(software=="nginx")
-                      sh 'yum install nginx -y'
+                      sh 'sudo yum install nginx -y'
                     // code.case_1()
                 }
         }
@@ -16,7 +16,7 @@ pipeline {
             steps{
                 script{
                     if(software=="git")
-                      sh 'yum install git -y'
+                      sh 'sudo yum install git -y'
                     // code.case_2()
 
                 }
