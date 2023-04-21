@@ -7,7 +7,7 @@ pipeline {
             steps {
                 script {
                     if(software=="npm")
-                      sh 'npm install'
+                      sh 'mvn package'
                     // code.case_1()
                 }
         }
