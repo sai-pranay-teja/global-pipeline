@@ -2,50 +2,29 @@ def call() {
 
 pipeline {
     agent any
-
-
-parameters{
-string(name: "NAME", defaultValue: "Go", description: "Tf you gonna do?")
-}
-
-
-stages {
-
-    
-    
-    stage("first") {
-
-        script{
-            if (params.NAME == 'GO') {
-                echo "alright go"
+    parameters { string(name: 'NAME', defaultValue: 'GO', description: 'Enter the name') }
+    stages {
+        stage('first') {
+            steps {
+                script {
+                    if (params.NAME== 'GO') {
+                        echo "proceed"
+                    }
+                    }
+            }
         }
-
-
-        steps {
-                input(
-                    message: "Ready to continue?",
-                    ok: "Yes"
-                )
+        stage('second') {
+            steps {
+                input {
+                message "Proceed?"
+                ok "Yes, we should."
+                }
+            }
+            }
         }
-
-        }
-    
-    stage("second") {
-        // input(id: 'input-1', message: 'Please enter the Course Name',parameters: [string(defaultValue: '',description: '',name: 'CourseName')])
-
-
-
-        when {
-            expression { params.NAME == 'COOL' }
-        }
-        steps{
-        
-        sh 'env'
-        }
-        
-        
     }
 }
+
 
 
 post {
@@ -54,8 +33,5 @@ post {
     }
 }
 
-}
 
-}
 
-}
