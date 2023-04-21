@@ -6,8 +6,8 @@ pipeline {
         stage('first') {
             steps {
                 script {
-                    if(software=="nginx")
-                      sh 'sudo yum install nginx -y'
+                    if(software=="npm")
+                      sh 'npm install'
                     // code.case_1()
                 }
         }
@@ -15,8 +15,8 @@ pipeline {
         stage('second') {
             steps{
                 script{
-                    if(software=="git")
-                      sh 'sudo yum install git -y'
+                    if(software=="mvn")
+                      sh 'mvn package'
                     // code.case_2()
 
                 }
