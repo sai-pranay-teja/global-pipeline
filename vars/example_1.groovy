@@ -12,7 +12,7 @@ string(name: "NAME", defaultValue: "Go", description: "Tf you gonna do?")
 stages {
     
     stage("first") {
-        NAME = input(id: 'input', message: 'Please enter the Name',parameters: [string(defaultValue: '',description: '',name: 'NAME')])
+        input(id: 'input', message: 'Please enter the Name',parameters: [string(defaultValue: '',description: '',name: 'NAME')])
 
         when {
             expression { params.NAME == 'Bro' }
@@ -23,7 +23,7 @@ stages {
         }
     }
     stage("second") {
-        course    = input(id: 'input-1', message: 'Please enter the Course Name',parameters: [string(defaultValue: '',description: '',name: 'CourseName')])
+        input(id: 'input-1', message: 'Please enter the Course Name',parameters: [string(defaultValue: '',description: '',name: 'CourseName')])
 
         when {
             expression { params.NAME == 'COOL' }
