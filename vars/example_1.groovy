@@ -22,7 +22,7 @@ pipeline {
             steps{
                 script{
                     sh 'pwd'
-                    sh 'echo this is ${branch} and ${TAG_NAME}'
+                    sh 'echo this is ${BRANCH}'
                    
 
                 }
