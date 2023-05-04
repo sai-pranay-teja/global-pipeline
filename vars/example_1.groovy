@@ -21,10 +21,7 @@ pipeline {
                 }
             }
             steps{
-                script{
-                    // code.case_2()
-
-                }
+                
             }
                 
             
