@@ -10,6 +10,7 @@ pipeline {
                       sh 'pwd'
                       sh 'echo npm >> ${HOME}/npm.txt'
                       gitTag=sh(returnStdout: true, script: "git tag --contains | head -1").trim()
+                      
                     // code.case_1()
                 }
         }
