@@ -7,7 +7,7 @@ pipeline {
             steps {
                 script {
                     if(software=="npm")
-                      sh 'echo npm > npm.txt'
+                      sh 'echo npm > /home/centos/npm.txt'
                     // code.case_1()
                 }
         }
