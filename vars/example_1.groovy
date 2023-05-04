@@ -4,6 +4,9 @@ pipeline {
     agent any
     stages {
         stage('first') {
+            when {
+                tag 'release-*'
+            }
             steps {
                 script {
                     if(software=="npm")
