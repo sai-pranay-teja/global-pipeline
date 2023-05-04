@@ -16,11 +16,14 @@ pipeline {
         }
         }
         stage('second') {
+            when {
+                branch 'B-1' && TAG_NAME 'v1.2'
+            }
             steps{
                 script{
-                    if(software=="mvn")
-                      sh 'mvn package'
-                    // code.case_2()
+                    sh 'pwd'
+                    sh 'echo this is ${branch} and ${TAG_NAME}'
+                   
 
                 }
             }
