@@ -25,13 +25,18 @@ pipeline {
             
         //     }
 
-           stage('Email') {
-            steps{
-                mail bcc: '', body: 'Hai Pranay, This is your first email', cc: '', from: 'algonox1.1@gmail.com', replyTo: '', subject: 'Demo Purpose', to: 'algonox1.1@gmail.com'
-            }
+        //    stage('Email') {
+        //     steps{
+        //         mail bcc: '', body: 'Hai Pranay, This is your first email', cc: '', from: 'algonox1.1@gmail.com', replyTo: '', subject: 'Demo Purpose', to: 'algonox1.1@gmail.com'
+        //     }
                 
             
-            }
+        //     }
+        
+
+
+
+        
         }
 
 
