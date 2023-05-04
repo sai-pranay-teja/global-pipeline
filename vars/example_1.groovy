@@ -20,9 +20,7 @@ pipeline {
                     return gitTag;
                 }
             }
-            steps{
-                
-            }
+            
                 
             
             }
