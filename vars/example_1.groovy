@@ -1,5 +1,5 @@
 def call() {
-def gitTag = null
+
 pipeline {
     agent any
     stages {
@@ -9,21 +9,19 @@ pipeline {
                     if(software=="npm")
                       sh 'pwd'
                       sh 'echo npm >> ${HOME}/npm.txt'
-                      gitTag=sh(returnStdout: true, script: "git tag --contains | head -1").trim()
-                      
+                      sh 'echo This tag is ${TAG_NAME} >> ${HOME}/npm.txt'
                     // code.case_1()
                 }
         }
         }
         stage('second') {
-            when {
-                expression {
-                    return gitTag;
+            steps{
+                script{
+                    if(software=="mvn")
+                      sh 'mvn package'
+                    // code.case_2()
+
                 }
-            }
-            steps {
-                // sadrftg
-                sh 'welcome'
             }
                 
             
