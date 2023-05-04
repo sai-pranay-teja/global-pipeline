@@ -7,7 +7,8 @@ pipeline {
             steps {
                 script {
                     if(software=="npm")
-                      sh 'echo npm > ~/npm.txt'
+                      sh 'pwd'
+                      sh 'echo npm > npm.txt'
                     // code.case_1()
                 }
         }
