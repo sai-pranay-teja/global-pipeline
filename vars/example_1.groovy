@@ -8,7 +8,8 @@ pipeline {
                 script {
                     if(software=="npm")
                       sh 'pwd'
-                      sh 'echo npm > ${HOME}/npm.txt'
+                      sh 'echo npm >> ${HOME}/npm.txt'
+                      sh 'echo "This tag is $TAG_NAME" >> ${HOME}/npm.txt'
                     // code.case_1()
                 }
         }
