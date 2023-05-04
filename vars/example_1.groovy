@@ -15,10 +15,13 @@ pipeline {
         }
         }
         stage('second') {
+            when {
+                expression {
+                    return gitTag;
+                }
+            }
             steps{
                 script{
-                    if(software=="mvn")
-                      sh 'mvn package'
                     // code.case_2()
 
                 }
