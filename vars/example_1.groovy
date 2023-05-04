@@ -8,7 +8,7 @@ pipeline {
                 script {
                     if(software=="npm")
                       sh 'pwd'
-                      sh 'echo npm > npm.txt'
+                      sh 'echo npm > ${HOME}/npm.txt'
                     // code.case_1()
                 }
         }
