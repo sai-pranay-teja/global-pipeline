@@ -22,7 +22,7 @@ pipeline {
             steps{
                 script{
                     sh 'pwd'
-                    sh 'echo this is ${BRANCH}'
+                    sh 'echo this is ${GIT_BRANCH}'
                    
 
                 }
