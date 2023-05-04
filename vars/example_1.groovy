@@ -20,7 +20,7 @@ pipeline {
                     return gitTag;
                 }
             }
-            steps{
+            steps {
                 // sadrftg
             }
                 
