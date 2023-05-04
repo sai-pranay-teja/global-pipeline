@@ -17,7 +17,7 @@ pipeline {
         }
         stage('second') {
             when {
-                branch 'B-1' || TAG_NAME 'v1.2'
+                branch 'B-1'
             }
             steps{
                 script{
